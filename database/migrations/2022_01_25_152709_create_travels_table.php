@@ -19,7 +19,7 @@ class CreateTravelsTable extends Migration
             $table->string('name');
             $table->string('place');
             $table->text('description');
-            $table->smallInteger('price');
+            $table->bigInteger('price');
         });
     }
 
