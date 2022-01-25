@@ -8,4 +8,10 @@
 @import '~bootstrap/scss/bootstrap';
 
 // Fontawesome
-@import '~font-awesome/scss/font-awesome';
+@import '~font-awesome/scss/font-awesome.scss';
+
+// Generals
+@import 'generals';
+
+// Footer
+@import 'footer';

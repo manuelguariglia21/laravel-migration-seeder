@@ -1,0 +1,13 @@
+body{
+  background-color: $blue;
+  color: white;
+}
+
+main{
+  padding: 10px;
+  min-height: calc(100vh - 76px);
+}
+
+main h1{
+  text-align: center;
+}
