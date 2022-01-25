@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Travel;
+
 class PageController extends Controller
 {
     //
@@ -11,6 +13,7 @@ class PageController extends Controller
         return view('home');
     }
     public function travel(){
-        return view('travel');
+        $travels = Travel::all();
+        return view('travel', compact('travels'));
     }
 }

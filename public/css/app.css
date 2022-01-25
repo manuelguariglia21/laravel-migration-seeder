@@ -14012,7 +14012,7 @@ body {
 
 main {
   padding: 10px;
-  min-height: calc(100vh - 76px);
+  min-height: calc(100vh - 106px);
 }
 
 main h1 {
@@ -14022,7 +14022,7 @@ main h1 {
 footer {
   color: #3490dc;
   background-color: white;
-  height: 20px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
