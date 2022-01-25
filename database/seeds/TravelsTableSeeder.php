@@ -1,6 +1,7 @@
 <?php
 use App\Travel;
 use Illuminate\Database\Seeder;
+use Faker\Generator as Faker;
 
 class TravelsTableSeeder extends Seeder
 {
@@ -9,14 +10,17 @@ class TravelsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
         //
-        $new_travel = new Travel();
-        $new_travel->name = 'Terre D’ ISLANDA 08 GIORNI/07 NOTTI';
-        $new_travel->place = 'ISLANDA';
-        $new_travel->description = 'un viaggio in un’isola magica ed affascinante, terra di fuoco e di ghiaccio tra vulcani attivi ed iceberg: questa è l’Islanda il Paese meno popolato d’Europa.';
-        $new_travel->price = 2440;
-        $new_travel->save();
+        for($i = 0; $i<100; $i++){
+            $new_travel = new Travel();
+            $new_travel->name = $faker->sentence();
+            $new_travel->place = $faker->state();
+            $new_travel->description = $faker->paragraph();
+            $new_travel->price = $faker->numberBetween(900, 5000);
+            $new_travel->save();
+        }
+        
     }
 }
